@@ -12,3 +12,12 @@ To install
 ```sh
 git config core.hooksPath $(git rev-parse --show-toplevel)/.githooks
 ```
+
+To block git commits, enter either one of these:
+
+- `blockcommit`
+- `blockgitcommit`
+
+Nice to have:
+
+- output offending files
