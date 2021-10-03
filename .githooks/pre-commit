@@ -1,9 +1,11 @@
 #!/bin/bash
-set -e
+set -x
 
-git diff  --staged \
+! git diff  --staged \
+  -U0 \
   -Gblockcommit \
-  -Gblockgitcommit 2>&1 | read
+  -Gblockgitcommit \
+  | grep '^[+-]' | grep -Ev '^(--- a/|\+\+\+ b/)' 2>&1 | read
 if [ $? = 1 ]; then
   echo "blocking git commit"
   exit 1
