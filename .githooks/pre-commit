@@ -1,12 +1,11 @@
 #!/bin/bash
-set -x
 
 ! git diff  --staged \
   -U0 \
   -Gblockcommit \
   -Gblockgitcommit \
-  | grep '^[+-]' | grep -Ev '^(--- a/|\+\+\+ b/)' 2>&1 | read
+  | grep '^[+]' | grep -Ev '^(\+\+\+ b/)' 2>&1 | read
 if [ $? = 1 ]; then
-  echo "blocking git commit"
+  echo "blocking git commit. macro found blocking gitcommit"
   exit 1
 fi
