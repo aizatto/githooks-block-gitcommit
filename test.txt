@@ -1,3 +1,5 @@
 blockmerge
 blockcommit
 blockgitcommit
+
+blockgitcommit
