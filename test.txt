@@ -1,0 +1,3 @@
+blockmerge
+blockcommit
+blockgitcommit

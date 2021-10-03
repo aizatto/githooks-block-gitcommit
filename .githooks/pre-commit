@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+! git diff  --staged \
+  -Gblockcommit \
+  -Gblockgitcommit 2>&1 | read
