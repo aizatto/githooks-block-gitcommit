@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ! git diff  --staged \
+  --diff-filter=ACM \
   -U0 \
   -Gblockcommit \
   -Gblockgitcommit \

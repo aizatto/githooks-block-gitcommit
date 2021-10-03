@@ -10,7 +10,7 @@ This is useful when I want to play around code which I shouldn't commit. ie:
 To install
 
 ```sh
-git config core.hooksPath $(git rev-parse --show-toplevel)/.githooks
+git config core.hooksPath githooks
 ```
 
 To block git commits, enter either one of these:
